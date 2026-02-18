@@ -17,9 +17,9 @@ export const CryptoCard: React.FC<CryptoCardProps> = ({ asset }) => {
 
   const formatMarketCap = (value: number) => {
     if (value >= 1e9) {
-      return `$${(value / 1e9).toFixed(2)}B`;
+      return `$${(value / 1e9)?.toFixed(2)}B`;
     } else if (value >= 1e6) {
-      return `$${(value / 1e6).toFixed(2)}M`;
+      return `$${(value / 1e6)?.toFixed(2)}M`;
     }
     return formatPrice(value);
   };

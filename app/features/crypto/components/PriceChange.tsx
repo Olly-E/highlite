@@ -22,7 +22,7 @@ export const PriceChange: React.FC<PriceChangeProps> = ({
     >
       <span>{isPositive ? "↗" : "↘"}</span>
       {isPositive ? "+" : ""}
-      {value.toFixed(2)}%
+      {value?.toFixed(2)}%
     </div>
   );
 };
